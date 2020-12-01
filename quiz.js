@@ -63,7 +63,7 @@ $(document).ready(function () {
 
         var score = {};
         score.percentDog = Math.round(answers.dog / answers.totalPoints * 100);
-        score.percentCat = Math.round(answers.cat / answers.totalPoints * 100);
+        score.percentCat = 100 - score.percentDog;
 
         // These get used as a text percent a lot, so just make a property for it
         score.percentDogText = score.percentDog + "%";
@@ -94,5 +94,5 @@ $(document).ready(function () {
     function showResults() {
         $("#results").slideToggle();
     }
-})
-;
+});
+
